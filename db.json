@@ -1,0 +1,36 @@
+{
+  "articles": [
+    { "id": 1, "title": "Unveiling the Power of APIs", "content": "Hi there!" },
+    {
+      "id": 2,
+      "title": "JSON Server: A Developer's Best Friend",
+      "content": "Hey! Have a great day"
+    }
+  ],
+  "cuisines": [
+    {
+      "name": "Italian",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    },
+    {
+      "name": "Chinese",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    },
+    {
+      "name": "Mexican",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    },
+    {
+      "name": "Indian",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    },
+    {
+      "name": "Japanese",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    },
+    {
+      "name": "Thai",
+      "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    }
+  ]
+}
