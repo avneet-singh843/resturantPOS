@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  Image,
-  FlatList,
-  TouchableOpacity,
-  StyleSheet,
-} from "react-native";
+import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
 
-export const Cuisines = () => {
+export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
   const [cuisines, setCuisines] = useState([]);
   const [error, setError] = useState(null);
-  const [selectedCuisine, setSelectedCuisine] = useState(null);
 
   const fetchCuisines = async () => {
     try {
@@ -40,27 +32,25 @@ export const Cuisines = () => {
 
   const renderItem = ({ item }) => {
     const isSelected = selectedCuisine === item.name;
-
     return (
       <TouchableOpacity
-        style={styles.item}
+        className={`items-center p-3 border ${
+          isSelected
+            ? "border-blue-500 bg-blue-100 shadow-md"
+            : "border-gray-200 bg-white"
+        } rounded-lg mx-2`}
         onPress={() => setSelectedCuisine(item.name)}
       >
-        <View
-          style={[
-            styles.imageContainer,
-            isSelected
-              ? styles.selectedImageContainer
-              : styles.normalImageContainer,
-          ]}
-        >
-          <Image source={{ uri: item.image }} style={styles.image} />
+        <View className="mb-2">
+          <Image
+            source={{ uri: item.image }}
+            className="w-16 h-16 rounded-full"
+          />
         </View>
         <Text
-          style={[
-            styles.text,
-            isSelected ? styles.selectedText : styles.normalText,
-          ]}
+          className={`text-center w-20 text-sm ${
+            isSelected ? "text-blue-500 font-bold" : "text-gray-800"
+          }`}
         >
           {item.name}
         </Text>
@@ -69,65 +59,15 @@ export const Cuisines = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View className="my-5">
       <FlatList
         data={cuisines}
         renderItem={renderItem}
         keyExtractor={(item) => item.name}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.listContent}
+        contentContainerStyle={{ paddingHorizontal: 8 }}
       />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    margin: 0,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 16,
-  },
-  listContent: {
-    paddingHorizontal: 0,
-  },
-  item: {
-    alignItems: "center",
-    marginHorizontal: 8,
-  },
-  imageContainer: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
-  },
-  normalImageContainer: {
-    backgroundColor: "#e5e7eb", // gray-200
-  },
-  selectedImageContainer: {
-    backgroundColor: "#3b82f6", // blue-500
-  },
-  image: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-  },
-  text: {
-    fontSize: 12,
-    marginTop: 8,
-    textAlign: "center",
-    width: 64,
-  },
-  normalText: {
-    color: "#4b5563", // gray-600
-  },
-  selectedText: {
-    color: "#3b82f6", // blue-500
-    fontWeight: "bold",
-  },
-});
