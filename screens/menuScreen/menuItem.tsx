@@ -20,7 +20,9 @@ export const MenuItem = ({ item, quantity, onIncrement, onDecrement }) => (
         {item.description}
       </Text>
       <View className="flex-row justify-between items-center">
-        <Text className="text-gray-800 font-bold text-base">{item.price}</Text>
+        <Text className="text-gray-800 font-bold text-base">
+          $ {item.price}
+        </Text>
         {quantity > 0 ? (
           <View className="flex-row items-center">
             <TouchableOpacity

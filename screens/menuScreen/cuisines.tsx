@@ -30,21 +30,21 @@ export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
     const isSelected = selectedCuisine === item.name;
     return (
       <TouchableOpacity
-        className={`items-center p-3 border ${
+        className={`items-center p-2 border ${
           isSelected
-            ? "border-blue-500 bg-blue-100 shadow-md"
+            ? "border-blue-500 bg-white shadow-md"
             : "border-gray-200 bg-white"
-        } rounded-lg mx-2`}
+        } rounded-2xl mx-2`}
         onPress={() => setSelectedCuisine(item.name)}
       >
-        <View className="mb-2">
+        <View className="">
           <Image
             source={{ uri: item.image }}
             className="w-12 h-12 rounded-full"
           />
         </View>
         <Text
-          className={`text-center w-18 text-sm ${
+          className={`text-center w-18 text-xs ${
             isSelected ? "text-blue-500 font-bold" : "text-gray-800"
           }`}
         >

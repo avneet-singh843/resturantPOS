@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native";
 import { Cuisines } from "./cuisines";
 import { MenuItem } from "./menuItem";
 import GoToCartBar from "./goToCartBar";
+import { FoodAdvertisement } from "./foodAdvertisement";
 
 const API_BASE_URL = "http://192.168.1.34:3000";
 
@@ -83,10 +84,12 @@ export const MenuScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView className="flex-1">
-      <ScrollView className="bg-gray-50 mb-16">
-        <Text className="bg-blue-500 text-white text-xl font-bold p-4 text-center">
+      <ScrollView className="bg-gray-50 mb-16" stickyHeaderIndices={[0]}>
+        <Text className="bg-white text-blue-500 text-4xl font-bold p-4 text-center mb-2">
           The Urban Cafe
         </Text>
+
+        <FoodAdvertisement />
 
         <Cuisines
           selectedCuisine={selectedCuisine}
