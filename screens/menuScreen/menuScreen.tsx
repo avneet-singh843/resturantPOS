@@ -11,7 +11,7 @@ import {
 import { SafeAreaView } from "react-native";
 import { Cuisines } from "./cuisines";
 import { MenuItem } from "./menuItem";
-import CheckoutBar from "./CheckoutBar";
+import GoToCartBar from "./goToCartBar";
 
 const API_BASE_URL = "http://192.168.1.34:3000";
 
@@ -124,7 +124,7 @@ export const MenuScreen = ({ navigation }) => {
         )}
       </ScrollView>
       <View className="absolute bottom-0 left-0 right-0">
-        <CheckoutBar cartItems={cartItems} navigation={navigation} />
+        <GoToCartBar cartItems={cartItems} navigation={navigation} />
       </View>
     </SafeAreaView>
   );

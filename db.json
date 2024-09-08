@@ -1,6 +1,10 @@
 {
   "articles": [
-    { "id": 1, "title": "Unveiling the Power of APIs", "content": "Hi there!" },
+    {
+      "id": 1,
+      "title": "Unveiling the Power of APIs",
+      "content": "Hi there!"
+    },
     {
       "id": 2,
       "title": "JSON Server: A Developer's Best Friend",
@@ -36,37 +40,37 @@
   "Italian": [
     {
       "name": "Pizza Margherita",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Pasta Carbonara",
-      "price": "$14.99",
+      "price": "14.99",
       "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Risotto ai Funghi",
-      "price": "$16.99",
+      "price": "16.99",
       "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Lasagna",
-      "price": "$13.99",
+      "price": "13.99",
       "description": "Layered pasta with Bolognese sauce, béchamel, and Parmesan cheese.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Tiramisu",
-      "price": "$7.99",
+      "price": "7.99",
       "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Bruschetta",
-      "price": "$8.99",
+      "price": "8.99",
       "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     }
@@ -74,37 +78,37 @@
   "Chinese": [
     {
       "name": "Dim Sum",
-      "price": "$10.99",
+      "price": "10.99",
       "description": "Assorted steamed dumplings with various fillings.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Kung Pao Chicken",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Dumplings",
-      "price": "$9.99",
+      "price": "9.99",
       "description": "Pork and vegetable-filled dumplings, either steamed or fried.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Sweet and Sour Pork",
-      "price": "$11.99",
+      "price": "11.99",
       "description": "Crispy pork cooked in a tangy sweet and sour sauce.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Spring Rolls",
-      "price": "$7.99",
+      "price": "7.99",
       "description": "Crispy rolls filled with vegetables and sometimes meat.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Peking Duck",
-      "price": "$24.99",
+      "price": "24.99",
       "description": "Roast duck served with pancakes, hoisin sauce, and green onions.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     }
@@ -112,37 +116,37 @@
   "Mexican": [
     {
       "name": "Tacos",
-      "price": "$8.99",
+      "price": "8.99",
       "description": "Soft or hard tortillas filled with various meats, cheese, and vegetables.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Burritos",
-      "price": "$9.99",
+      "price": "9.99",
       "description": "Large flour tortillas wrapped around meat, beans, rice, and cheese.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Enchiladas",
-      "price": "$10.99",
+      "price": "10.99",
       "description": "Corn tortillas rolled around meat and cheese, topped with sauce.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Guacamole",
-      "price": "$6.99",
+      "price": "6.99",
       "description": "Mashed avocado dip with lime, onion, and cilantro.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Churros",
-      "price": "$5.99",
+      "price": "5.99",
       "description": "Fried dough pastry dusted with cinnamon sugar.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Quesadillas",
-      "price": "$8.99",
+      "price": "8.99",
       "description": "Grilled tortillas filled with melted cheese and sometimes meat.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     }
@@ -150,37 +154,37 @@
   "Indian": [
     {
       "name": "Biryani",
-      "price": "$13.99",
+      "price": "13.99",
       "description": "Fragrant rice dish cooked with meat and aromatic spices.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Butter Chicken",
-      "price": "$14.99",
+      "price": "14.99",
       "description": "Tender chicken in a creamy tomato sauce.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Masala Dosa",
-      "price": "$8.99",
+      "price": "8.99",
       "description": "Crispy rice crepe filled with spiced potatoes.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Paneer Tikka",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Grilled chunks of paneer cheese marinated in spices.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Naan",
-      "price": "$3.99",
+      "price": "3.99",
       "description": "Soft and fluffy leavened bread baked in a tandoor.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Gulab Jamun",
-      "price": "$5.99",
+      "price": "5.99",
       "description": "Sweet deep-fried dough balls soaked in sugar syrup.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     }
@@ -188,37 +192,37 @@
   "Japanese": [
     {
       "name": "Sushi",
-      "price": "$15.99",
+      "price": "15.99",
       "description": "Assorted raw fish and rice rolls.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Ramen",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Noodle soup with broth, meat, and vegetables.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Tempura",
-      "price": "$11.99",
+      "price": "11.99",
       "description": "Battered and deep-fried seafood and vegetables.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Tonkatsu",
-      "price": "$13.99",
+      "price": "13.99",
       "description": "Breaded and deep-fried pork cutlet.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Miso Soup",
-      "price": "$3.99",
+      "price": "3.99",
       "description": "Soup made from fermented soybean paste, tofu, and seaweed.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Matcha Ice Cream",
-      "price": "$6.99",
+      "price": "6.99",
       "description": "Green tea-flavored ice cream.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     }
@@ -226,39 +230,227 @@
   "Thai": [
     {
       "name": "Pad Thai",
-      "price": "$10.99",
+      "price": "10.99",
       "description": "Stir-fried noodles with shrimp, tofu, peanuts, and bean sprouts.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Green Curry",
-      "price": "$12.99",
+      "price": "12.99",
       "description": "Spicy green curry with chicken, coconut milk, and vegetables.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Tom Yum Goong",
-      "price": "$11.99",
+      "price": "11.99",
       "description": "Hot and sour soup with shrimp, lemongrass, and lime.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Mango Sticky Rice",
-      "price": "$8.99",
+      "price": "8.99",
       "description": "Sweet sticky rice served with fresh mango and coconut milk.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Papaya Salad",
-      "price": "$9.99",
+      "price": "9.99",
       "description": "Spicy salad made from shredded green papaya, lime, and peanuts.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
     },
     {
       "name": "Thai Iced Tea",
-      "price": "$4.99",
+      "price": "4.99",
       "description": "Sweet and creamy iced tea made with condensed milk.",
       "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "08be",
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Burritos": {
+        "name": "Burritos",
+        "price": "9.99",
+        "description": "Large flour tortillas wrapped around meat, beans, rice, and cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Mexican"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Tom Yum Goong": {
+        "name": "Tom Yum Goong",
+        "price": "11.99",
+        "description": "Hot and sour soup with shrimp, lemongrass, and lime.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Thai"
+      }
+    },
+    {
+      "id": "04b2",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Sweet and Sour Pork": {
+        "name": "Sweet and Sour Pork",
+        "price": "11.99",
+        "description": "Crispy pork cooked in a tangy sweet and sour sauce.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      }
+    },
+    {
+      "id": "d8af",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Sweet and Sour Pork": {
+        "name": "Sweet and Sour Pork",
+        "price": "11.99",
+        "description": "Crispy pork cooked in a tangy sweet and sour sauce.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      }
+    },
+    {
+      "id": "1205",
+      "Ramen": {
+        "name": "Ramen",
+        "price": "12.99",
+        "description": "Noodle soup with broth, meat, and vegetables.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Japanese"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Lasagna": {
+        "name": "Lasagna",
+        "price": "13.99",
+        "description": "Layered pasta with Bolognese sauce, béchamel, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "dc29",
+      "Ramen": {
+        "name": "Ramen",
+        "price": "12.99",
+        "description": "Noodle soup with broth, meat, and vegetables.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Japanese"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Lasagna": {
+        "name": "Lasagna",
+        "price": "13.99",
+        "description": "Layered pasta with Bolognese sauce, béchamel, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Tiramisu": {
+        "name": "Tiramisu",
+        "price": "7.99",
+        "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "ad28",
+      "Ramen": {
+        "name": "Ramen",
+        "price": "12.99",
+        "description": "Noodle soup with broth, meat, and vegetables.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Japanese"
+      },
+      "Masala Dosa": {
+        "name": "Masala Dosa",
+        "price": "8.99",
+        "description": "Crispy rice crepe filled with spiced potatoes.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Lasagna": {
+        "name": "Lasagna",
+        "price": "13.99",
+        "description": "Layered pasta with Bolognese sauce, béchamel, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Tiramisu": {
+        "name": "Tiramisu",
+        "price": "7.99",
+        "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
+        "image": "https://i.pinimg.com/236x/dc/80/6d/dc806ddc96d2467c5f7e1bba46acc6fe.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
     }
   ]
 }
