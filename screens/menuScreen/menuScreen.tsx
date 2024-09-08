@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   ScrollView,
   Animated,
+  Dimensions,
 } from "react-native";
 import { SafeAreaView } from "react-native";
 import { Cuisines } from "./cuisines";
@@ -23,6 +24,8 @@ export const MenuScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [cartItems, setCartItems] = useState({});
   const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  const { height } = Dimensions.get("window");
 
   const fetchCuisines = async () => {
     setIsLoading(true);
@@ -84,7 +87,11 @@ export const MenuScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView className="flex-1">
-      <ScrollView className="bg-gray-50 mb-16" stickyHeaderIndices={[0]}>
+      <ScrollView
+        className="bg-gray-50"
+        stickyHeaderIndices={[0]}
+        style={{ marginBottom: height * 0.08 }} // Adjusts based on screen height
+      >
         <Text className="bg-white text-blue-500 text-4xl font-bold p-4 text-center mb-2">
           The Urban Cafe
         </Text>
@@ -127,7 +134,11 @@ export const MenuScreen = ({ navigation }) => {
         )}
       </ScrollView>
       <View className="absolute bottom-0 left-0 right-0">
-        <GoToCartBar cartItems={cartItems} navigation={navigation} />
+        <GoToCartBar
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          navigation={navigation}
+        />
       </View>
     </SafeAreaView>
   );

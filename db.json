@@ -478,6 +478,343 @@
         "quantity": 1,
         "selectedCuisine": "Indian"
       }
+    },
+    {
+      "id": "8627",
+      "Biryani": {
+        "name": "Biryani",
+        "price": "13.99",
+        "description": "Fragrant rice dish cooked with meat and aromatic spices.",
+        "image": "https://i.pinimg.com/474x/c5/5d/a0/c55da0cf6b0af33ac5978de0a1218f73.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Indian"
+      },
+      "Paneer Tikka": {
+        "name": "Paneer Tikka",
+        "price": "12.99",
+        "description": "Grilled chunks of paneer cheese marinated in spices.",
+        "image": "https://i.pinimg.com/474x/f8/10/0d/f8100d2b169b86447b6ca5f77c9a10d1.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Pad Thai": {
+        "name": "Pad Thai",
+        "price": "10.99",
+        "description": "Stir-fried noodles with shrimp, tofu, peanuts, and bean sprouts.",
+        "image": "https://i.pinimg.com/474x/05/6b/6f/056b6f1046462a0806a5f32cebe7276a.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Thai"
+      },
+      "Dumplings": {
+        "name": "Dumplings",
+        "price": "9.99",
+        "description": "Pork and vegetable-filled dumplings, either steamed or fried.",
+        "image": "https://i.pinimg.com/474x/db/a7/4c/dba74c78e7e4654a4f3d718b813be2a4.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      },
+      "Spring Rolls": {
+        "name": "Spring Rolls",
+        "price": "7.99",
+        "description": "Crispy rolls filled with vegetables and sometimes meat.",
+        "image": "https://i.pinimg.com/474x/46/74/b8/4674b864d870ee34ca38c513edd38269.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      }
+    },
+    {
+      "id": "47d4",
+      "Biryani": {
+        "name": "Biryani",
+        "price": "13.99",
+        "description": "Fragrant rice dish cooked with meat and aromatic spices.",
+        "image": "https://i.pinimg.com/474x/c5/5d/a0/c55da0cf6b0af33ac5978de0a1218f73.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Indian"
+      },
+      "Paneer Tikka": {
+        "name": "Paneer Tikka",
+        "price": "12.99",
+        "description": "Grilled chunks of paneer cheese marinated in spices.",
+        "image": "https://i.pinimg.com/474x/f8/10/0d/f8100d2b169b86447b6ca5f77c9a10d1.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Pad Thai": {
+        "name": "Pad Thai",
+        "price": "10.99",
+        "description": "Stir-fried noodles with shrimp, tofu, peanuts, and bean sprouts.",
+        "image": "https://i.pinimg.com/474x/05/6b/6f/056b6f1046462a0806a5f32cebe7276a.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Thai"
+      },
+      "Dumplings": {
+        "name": "Dumplings",
+        "price": "9.99",
+        "description": "Pork and vegetable-filled dumplings, either steamed or fried.",
+        "image": "https://i.pinimg.com/474x/db/a7/4c/dba74c78e7e4654a4f3d718b813be2a4.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      },
+      "Spring Rolls": {
+        "name": "Spring Rolls",
+        "price": "7.99",
+        "description": "Crispy rolls filled with vegetables and sometimes meat.",
+        "image": "https://i.pinimg.com/474x/46/74/b8/4674b864d870ee34ca38c513edd38269.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Chinese"
+      }
+    },
+    {
+      "id": "cc7f",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "f489",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Paneer Tikka": {
+        "name": "Paneer Tikka",
+        "price": "12.99",
+        "description": "Grilled chunks of paneer cheese marinated in spices.",
+        "image": "https://i.pinimg.com/474x/f8/10/0d/f8100d2b169b86447b6ca5f77c9a10d1.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Indian"
+      },
+      "Tempura": {
+        "name": "Tempura",
+        "price": "11.99",
+        "description": "Battered and deep-fried seafood and vegetables.",
+        "image": "https://i.pinimg.com/474x/c4/7f/b7/c47fb74d6e211aeb9d557f15ac99c6ed.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Japanese"
+      }
+    },
+    {
+      "id": "b4ea",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "5c81",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "b30b"
+    },
+    {
+      "id": "6714"
+    },
+    {
+      "id": "55f7"
+    },
+    {
+      "id": "66c1",
+      "Risotto ai Funghi": {
+        "name": "Risotto ai Funghi",
+        "price": "16.99",
+        "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/56/75/62/56756250fe4e9e0eb74144d9bd5b5c86.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Bruschetta": {
+        "name": "Bruschetta",
+        "price": "8.99",
+        "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+        "image": "https://i.pinimg.com/474x/5d/16/83/5d16832907a3aeeb92f662672647411d.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "95d3",
+      "Risotto ai Funghi": {
+        "name": "Risotto ai Funghi",
+        "price": "16.99",
+        "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/56/75/62/56756250fe4e9e0eb74144d9bd5b5c86.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Bruschetta": {
+        "name": "Bruschetta",
+        "price": "8.99",
+        "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+        "image": "https://i.pinimg.com/474x/5d/16/83/5d16832907a3aeeb92f662672647411d.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Tiramisu": {
+        "name": "Tiramisu",
+        "price": "7.99",
+        "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
+        "image": "https://i.pinimg.com/474x/ea/d1/f8/ead1f838af23e190f7b217060d068236.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "da6d",
+      "Risotto ai Funghi": {
+        "name": "Risotto ai Funghi",
+        "price": "16.99",
+        "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/56/75/62/56756250fe4e9e0eb74144d9bd5b5c86.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Bruschetta": {
+        "name": "Bruschetta",
+        "price": "8.99",
+        "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+        "image": "https://i.pinimg.com/474x/5d/16/83/5d16832907a3aeeb92f662672647411d.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Tiramisu": {
+        "name": "Tiramisu",
+        "price": "7.99",
+        "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
+        "image": "https://i.pinimg.com/474x/ea/d1/f8/ead1f838af23e190f7b217060d068236.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "9508"
+    },
+    {
+      "id": "6dc1",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "c68f",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "b25b",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "83a6",
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "dd19",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "c91a",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Dimensions } from "react-native";
 
-const GoToCartBar = ({ cartItems, navigation }) => {
+const GoToCartBar = ({ cartItems, setCartItems, navigation }) => {
   let price = 0;
 
   Object.values(cartItems).forEach((item) => {
@@ -27,14 +27,18 @@ const GoToCartBar = ({ cartItems, navigation }) => {
       console.log("Checkout successful:", responseData);
 
       navigation.navigate("CheckoutScreen");
+      setCartItems({});
     } catch (error) {
       console.error("Error during checkout:", error);
     }
   };
 
+  const { height } = Dimensions.get("window");
+  const { width } = Dimensions.get("window");
+
   return (
-    <View className="absolute bottom-2 left-0 right-0">
-      <View className="bg-white p-4 rounded-t-3xl shadow-lg flex-row justify-between items-center">
+    <View className="absolute left-0 right-0" style={{ bottom: height * 0.01 }}>
+      <View className="bg-white p-4 rounded-3xl shadow-lg flex-row justify-between items-center">
         <View>
           <Text className="text-gray-500 text-lg">Total Amount</Text>
           <Text className="text-black text-2xl font-bold">
@@ -42,10 +46,16 @@ const GoToCartBar = ({ cartItems, navigation }) => {
           </Text>
         </View>
         <Pressable
-          className="bg-blue-500 py-3 px-6 rounded-full"
+          className={`bg-blue-500 ${
+            width > 350 ? "py-3 px-6" : "py-2 px-4"
+          } rounded-full`}
           onPress={handleCheckout}
         >
-          <Text className="text-white text-lg">Go to Cart</Text>
+          <Text
+            className={`text-white ${width > 350 ? "text-lg" : "text-base"}`}
+          >
+            Go to Cart
+          </Text>
         </Pressable>
       </View>
     </View>
