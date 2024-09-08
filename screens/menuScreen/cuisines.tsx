@@ -44,11 +44,11 @@ export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
         <View className="mb-2">
           <Image
             source={{ uri: item.image }}
-            className="w-16 h-16 rounded-full"
+            className="w-12 h-12 rounded-full"
           />
         </View>
         <Text
-          className={`text-center w-20 text-sm ${
+          className={`text-center w-18 text-sm ${
             isSelected ? "text-blue-500 font-bold" : "text-gray-800"
           }`}
         >
