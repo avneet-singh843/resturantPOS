@@ -1,9 +1,9 @@
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MenuScreen } from "./screens/menuScreen/menuScreen";
 import { LandingScreen } from "./screens/landingScreen/landingScreen";
-import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { CheckoutScreen } from "./screens/checkoutScreen/CheckoutScreen";
 import { OrderPlaced } from "./screens/OrderPlaced/orderPlaced";

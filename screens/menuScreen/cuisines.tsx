@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
+import getEnvVars from "../../env";
+const { apiBaseUrl } = getEnvVars();
 
 export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
   const [cuisines, setCuisines] = useState([]);
@@ -7,7 +9,7 @@ export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
 
   const fetchCuisines = async () => {
     try {
-      const response = await fetch("http://192.168.1.34:3000/cuisines");
+      const response = await fetch(`${apiBaseUrl}/cuisines`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
