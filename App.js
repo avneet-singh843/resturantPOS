@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { CheckoutScreen } from "./screens/checkoutScreen/CheckoutScreen";
+import { OrderPlaced } from "./screens/OrderPlaced/orderPlaced";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ export default function App() {
           <Stack.Screen name="Landing" component={LandingScreen} />
           <Stack.Screen name="Menu" component={MenuScreen} />
           <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
+          <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

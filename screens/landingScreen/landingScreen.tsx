@@ -16,6 +16,8 @@ const logo = require("../../assets/logo.png");
 export const LandingScreen = ({ navigation }) => {
   const opacity = useSharedValue(0);
   const shake = useSharedValue(0);
+  const scale = useSharedValue(1); // Added scale shared value for logo animation
+
   const animatedStyle = useAnimatedStyle(() => {
     return {
       opacity: withTiming(opacity.value, { duration: 1000 }),
@@ -32,6 +34,16 @@ export const LandingScreen = ({ navigation }) => {
       transform: [
         {
           translateX: shake.value,
+        },
+      ],
+    };
+  });
+
+  const scaleStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          scale: scale.value,
         },
       ],
     };
@@ -55,36 +67,54 @@ export const LandingScreen = ({ navigation }) => {
       );
     };
 
+    const startScaling = () => {
+      scale.value = withRepeat(
+        withSequence(
+          withTiming(1.05, {
+            duration: 1500,
+            easing: Easing.inOut(Easing.ease),
+          }),
+          withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+        ),
+        -1,
+        true
+      );
+    };
+
     startShaking();
+    startScaling();
   }, []);
 
   return (
-    <SafeAreaView className="flex-1 bg-blue-500 justify-center items-center">
-      <View className="w-3/4 items-center">
+    <SafeAreaView className="flex-1 bg-blue-500 justify-between items-center">
+      <View
+        className="w-3/4 items-center justify-center"
+        style={{ marginTop: "50%" }}
+      >
         <Animated.Image
           source={logo}
-          className="w-56 h-56 mb-4"
-          style={animatedStyle}
+          className="w-72 h-72" // Increased size
+          style={[animatedStyle, scaleStyle]} // Applied scale animation
         />
-        <Animated.Text
-          className="text-white text-3xl font-bold mb-4"
-          style={animatedStyle}
-        >
-          The Urban Cafe
-        </Animated.Text>
-        <Animated.View style={[animatedStyle, shakeStyle]}>
-          <Pressable
-            onPress={() => {
-              navigation.navigate("Menu");
-            }}
-            className="bg-white rounded-full py-2 px-6"
-          >
-            <Text className="text-blue-500 font-semibold">
-              Let's Get Started
-            </Text>
-          </Pressable>
-        </Animated.View>
       </View>
+      <Animated.View
+        style={[
+          animatedStyle,
+          shakeStyle,
+          { marginBottom: "13%", width: "80%" },
+        ]}
+      >
+        <Pressable
+          onPress={() => {
+            navigation.navigate("Menu");
+          }}
+          className="bg-white rounded-lg py-2 px-6 items-center"
+        >
+          <Text className="text-blue-500 font-bold text-xl">
+            Let's Get Started
+          </Text>
+        </Pressable>
+      </Animated.View>
     </SafeAreaView>
   );
 };

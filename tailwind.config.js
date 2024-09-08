@@ -5,6 +5,7 @@ module.exports = {
     "./screens/menuScreen/**/*.{js,jsx,ts,tsx}",
     "./screens/landingScreen/**/*.{js,jsx,ts,tsx}",
     "./screens/checkoutScreen/**/*.{js,jsx,ts,tsx}",
+    "./screens/OrderPlaced/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},

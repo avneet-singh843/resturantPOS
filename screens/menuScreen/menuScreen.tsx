@@ -14,6 +14,7 @@ import { Cuisines } from "./cuisines";
 import { MenuItem } from "./menuItem";
 import GoToCartBar from "./goToCartBar";
 import { FoodAdvertisement } from "./foodAdvertisement";
+import Header from "./header";
 
 const API_BASE_URL = "http://192.168.1.34:3000";
 
@@ -90,11 +91,9 @@ export const MenuScreen = ({ navigation }) => {
       <ScrollView
         className="bg-gray-50"
         stickyHeaderIndices={[0]}
-        style={{ marginBottom: height * 0.08 }} // Adjusts based on screen height
+        style={{ marginBottom: height * 0.08 }}
       >
-        <Text className="bg-white text-blue-500 text-4xl font-bold p-4 text-center mb-2">
-          The Urban Cafe
-        </Text>
+        <Header />
 
         <FoodAdvertisement />
 
