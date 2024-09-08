@@ -3,9 +3,9 @@ import { View, Text, Pressable } from "react-native";
 import RBSheet from "react-native-raw-bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
 
-export const Footer = ({ cartItems, calculateTotal }) => {
+export const Footer = ({ navigation, cartItems, calculateTotal }) => {
   const refRBSheet = useRef();
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null); // State to track selected payment method
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
 
   const paymentMethods = [
     { method: "Credit Card", icon: "card-outline" },
@@ -14,7 +14,7 @@ export const Footer = ({ cartItems, calculateTotal }) => {
   ];
 
   const handleSelectPaymentMethod = (method) => {
-    setSelectedPaymentMethod(method); // Set selected payment method
+    setSelectedPaymentMethod(method);
   };
 
   return (
@@ -33,7 +33,10 @@ export const Footer = ({ cartItems, calculateTotal }) => {
           </Pressable>
         </View>
 
-        <Pressable className="bg-blue-500 py-2 px-4 rounded-full">
+        <Pressable
+          className="bg-blue-500 py-2 px-4 rounded-full"
+          onPress={() => navigation.navigate("OrderPlaced")}
+        >
           <Text className="text-white text-base font-bold">
             Place Order (
             {cartItems.length > 0 ? Object.keys(cartItems[0]).length - 1 : 0})
@@ -41,14 +44,12 @@ export const Footer = ({ cartItems, calculateTotal }) => {
         </Pressable>
       </View>
 
-      {/* Bottom Sheet with animationType set to 'slide' */}
       <RBSheet
         ref={refRBSheet}
-        useNativeDriver={true} // For smoother animations
-        animationType="slide" // Animation for open/close
+        useNativeDriver={true}
         customStyles={{
           wrapper: {
-            backgroundColor: "rgba(0,0,0,0.5)", // Background overlay
+            backgroundColor: "rgba(0,0,0,0.5)",
           },
           draggableIcon: {
             backgroundColor: "#000",
@@ -56,7 +57,7 @@ export const Footer = ({ cartItems, calculateTotal }) => {
           container: {
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
-            height: "43%", // Adjust height
+            height: "43%",
           },
         }}
       >
@@ -65,7 +66,6 @@ export const Footer = ({ cartItems, calculateTotal }) => {
             Select Payment Method
           </Text>
 
-          {/* Map through payment methods */}
           {paymentMethods.map((payment, index) => (
             <Pressable
               key={index}
@@ -74,7 +74,7 @@ export const Footer = ({ cartItems, calculateTotal }) => {
                   ? "border-2 border-blue-500 bg-gray-100"
                   : "bg-gray-100"
               }`}
-              onPress={() => handleSelectPaymentMethod(payment.method)} // Select payment method
+              onPress={() => handleSelectPaymentMethod(payment.method)}
             >
               <Text className="text-base text-gray-800">{payment.method}</Text>
               <Ionicons name={payment.icon} size={24} color="#007bff" />
@@ -84,7 +84,7 @@ export const Footer = ({ cartItems, calculateTotal }) => {
           <Pressable
             className="bg-blue-600 p-3 mb-3 rounded-md items-center justify-center"
             onPress={() => {
-              refRBSheet.current.close(); // Close the bottom sheet
+              refRBSheet.current.close();
             }}
           >
             <Text className="text-white font-bold text-lg">Done</Text>

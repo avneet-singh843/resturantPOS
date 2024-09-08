@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  Image,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
-import { SafeAreaView } from "react-native";
+import { View, Text, ScrollView, SafeAreaView } from "react-native";
 import { CartItemCard } from "./cartItemCard";
 import { Header } from "./header";
 import { Footer } from "./footer";
+import { RecommendationList } from "./recommendationList";
+import { BillDetails } from "./billDetails";
 
 export const CheckoutScreen = ({ navigation }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -48,7 +42,6 @@ export const CheckoutScreen = ({ navigation }) => {
     if (updatedCartItems[0][key].quantity > 1) {
       updatedCartItems[0][key].quantity -= 1;
     } else {
-      // If quantity is zero, remove the item from the cart
       delete updatedCartItems[0][key];
     }
 
@@ -88,8 +81,14 @@ export const CheckoutScreen = ({ navigation }) => {
           incrementQuantity={incrementQuantity}
           decrementQuantity={decrementQuantity}
         />
+        <RecommendationList cartItems={cartItems} setCartItems={setCartItems} />
+        <BillDetails calculateTotal={calculateTotal} />
       </ScrollView>
-      <Footer cartItems={cartItems} calculateTotal={calculateTotal} />
+      <Footer
+        navigation={navigation}
+        cartItems={cartItems}
+        calculateTotal={calculateTotal}
+      />
     </SafeAreaView>
   );
 };

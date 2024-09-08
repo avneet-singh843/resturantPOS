@@ -7,7 +7,7 @@ export const CartItemCard = ({
   decrementQuantity,
 }) => {
   return (
-    <View className="mx-5 my-5">
+    <View className="mx-5 my-5 mb-2">
       {cartItems.length > 0 ? (
         Object.keys(cartItems[0]).map((key) => {
           if (key !== "id") {
