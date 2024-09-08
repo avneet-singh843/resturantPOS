@@ -7,17 +7,13 @@ export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
 
   const fetchCuisines = async () => {
     try {
-      console.log("Fetching cuisines...");
       const response = await fetch("http://192.168.1.34:3000/cuisines");
-      console.log("Response status:", response.status);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      console.log("Data fetched:", data);
       setCuisines(data);
     } catch (error) {
-      console.error("Error fetching cuisines:", error);
       setError("Failed to fetch cuisines. Please try again later.");
     }
   };
