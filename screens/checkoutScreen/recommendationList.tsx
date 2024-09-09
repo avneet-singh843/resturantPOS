@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Image, Pressable, FlatList } from "react-native";
-
+import { API_BASE_URL } from "@env";
+const apiBaseUrl = API_BASE_URL;
 export const RecommendationList = ({ cartItems, setCartItems }) => {
   const [recommendations, setRecommendations] = useState([]);
   const [error, setError] = useState(null);
 
   const fetchRecommendations = async () => {
     try {
-      const response = await fetch("http://192.168.1.34:3000/recommendations");
+      const response = await fetch(`${apiBaseUrl}/recommendations`);
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

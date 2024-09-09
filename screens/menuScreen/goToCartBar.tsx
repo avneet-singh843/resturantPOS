@@ -1,6 +1,9 @@
 import React from "react";
 import { View, Text, Pressable, Dimensions } from "react-native";
 
+import { API_BASE_URL } from "@env";
+const apiBaseUrl = API_BASE_URL;
+
 const GoToCartBar = ({ cartItems, setCartItems, navigation }) => {
   let price = 0;
 
@@ -11,7 +14,7 @@ const GoToCartBar = ({ cartItems, setCartItems, navigation }) => {
 
   const handleCheckout = async () => {
     try {
-      const response = await fetch("http://192.168.1.34:3000/cartItems", {
+      const response = await fetch(`${apiBaseUrl}/cartItems`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

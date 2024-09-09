@@ -6,13 +6,16 @@ import { Footer } from "./footer";
 import { RecommendationList } from "./recommendationList";
 import { BillDetails } from "./billDetails";
 
+import { API_BASE_URL } from "@env";
+const apiBaseUrl = API_BASE_URL;
+
 export const CheckoutScreen = ({ navigation }) => {
   const [cartItems, setCartItems] = useState([]);
   const [error, setError] = useState(null);
 
   const fetchCuisines = async () => {
     try {
-      const response = await fetch("http://192.168.1.34:3000/cartItems");
+      const response = await fetch(`${apiBaseUrl}/cartItems`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

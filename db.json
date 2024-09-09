@@ -344,5 +344,138 @@
       "id": "e2fb"
     }
   ],
-  "cartItems": []
+  "cartItems": [
+    {
+      "id": "d68a",
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "id": "dec2",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Bruschetta": {
+        "name": "Bruschetta",
+        "price": "8.99",
+        "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+        "image": "https://i.pinimg.com/474x/5d/16/83/5d16832907a3aeeb92f662672647411d.jpg",
+        "id": "209c",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Biryani": {
+        "name": "Biryani",
+        "price": "13.99",
+        "description": "Fragrant rice dish cooked with meat and aromatic spices.",
+        "image": "https://i.pinimg.com/474x/c5/5d/a0/c55da0cf6b0af33ac5978de0a1218f73.jpg",
+        "id": "32e9",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      },
+      "Paneer Tikka": {
+        "name": "Paneer Tikka",
+        "price": "12.99",
+        "description": "Grilled chunks of paneer cheese marinated in spices.",
+        "image": "https://i.pinimg.com/474x/f8/10/0d/f8100d2b169b86447b6ca5f77c9a10d1.jpg",
+        "id": "7b7c",
+        "quantity": 1,
+        "selectedCuisine": "Indian"
+      }
+    },
+    {
+      "id": "5aff",
+      "Risotto ai Funghi": {
+        "name": "Risotto ai Funghi",
+        "price": "16.99",
+        "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/56/75/62/56756250fe4e9e0eb74144d9bd5b5c86.jpg",
+        "id": "9fc1",
+        "quantity": 2,
+        "selectedCuisine": "Italian"
+      },
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "id": "f6dc",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "9ba0",
+      "Pasta Carbonara": {
+        "name": "Pasta Carbonara",
+        "price": "14.99",
+        "description": "Rich pasta with pancetta, egg, and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/b9/ad/2a/b9ad2adc6028d2d20f5a93da59259290.jpg",
+        "id": "f6dc",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Risotto ai Funghi": {
+        "name": "Risotto ai Funghi",
+        "price": "16.99",
+        "description": "Creamy risotto with wild mushrooms and Parmesan cheese.",
+        "image": "https://i.pinimg.com/474x/56/75/62/56756250fe4e9e0eb74144d9bd5b5c86.jpg",
+        "id": "9fc1",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      },
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "id": "dec2",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    },
+    {
+      "id": "43b7",
+      "Enchiladas": {
+        "name": "Enchiladas",
+        "price": "10.99",
+        "description": "Corn tortillas rolled around meat and cheese, topped with sauce.",
+        "image": "https://i.pinimg.com/474x/58/a6/80/58a6803f2b932f10c393f2d6cd217eeb.jpg",
+        "id": "0e45",
+        "quantity": 1,
+        "selectedCuisine": "Mexican"
+      },
+      "Burritos": {
+        "name": "Burritos",
+        "price": "9.99",
+        "description": "Large flour tortillas wrapped around meat, beans, rice, and cheese.",
+        "image": "https://i.pinimg.com/474x/5f/40/71/5f4071edda70c75067a41a72cb81d9ad.jpg",
+        "id": "67b7",
+        "quantity": 1,
+        "selectedCuisine": "Mexican"
+      },
+      "Guacamole": {
+        "name": "Guacamole",
+        "price": "6.99",
+        "description": "Mashed avocado dip with lime, onion, and cilantro.",
+        "image": "https://i.pinimg.com/474x/2e/a7/7d/2ea77d870e6aa5707ec82a81eacb1fde.jpg",
+        "id": "7a7f",
+        "quantity": 2,
+        "selectedCuisine": "Mexican"
+      }
+    },
+    {
+      "id": "39e3",
+      "Pizza Margherita": {
+        "name": "Pizza Margherita",
+        "price": "12.99",
+        "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+        "image": "https://i.pinimg.com/474x/0b/c4/c7/0bc4c7d3ab717fe2aec489e8f5813881.jpg",
+        "id": "dec2",
+        "quantity": 1,
+        "selectedCuisine": "Italian"
+      }
+    }
+  ]
 }

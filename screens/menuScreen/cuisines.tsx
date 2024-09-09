@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
-import getEnvVars from "../../env";
-const { apiBaseUrl } = getEnvVars();
+import { API_BASE_URL } from "@env";
+const apiBaseUrl = API_BASE_URL;
 
 export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
   const [cuisines, setCuisines] = useState([]);

@@ -16,7 +16,8 @@ import GoToCartBar from "./goToCartBar";
 import { FoodAdvertisement } from "./foodAdvertisement";
 import Header from "./header";
 
-const API_BASE_URL = "http://192.168.1.34:3000";
+import { API_BASE_URL } from "@env";
+const apiBaseUrl = API_BASE_URL;
 
 export const MenuScreen = ({ navigation }) => {
   const [selectedCuisine, setSelectedCuisine] = useState("Italian");
@@ -32,7 +33,8 @@ export const MenuScreen = ({ navigation }) => {
     setIsLoading(true);
     fadeAnim.setValue(0);
     try {
-      const response = await fetch(`${API_BASE_URL}/${selectedCuisine}`);
+      const response = await fetch(`${apiBaseUrl}/${selectedCuisine}`);
+
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.status}`);
       }
