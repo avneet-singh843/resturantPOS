@@ -2,12 +2,18 @@ import React, { useRef, useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import RBSheet from "react-native-raw-bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
+import { useCart } from "../../cartContext";
+const apiBaseUrl = "http://192.168.1.34:3000";
 
-export const Footer = ({ navigation, cartItems, calculateTotal }) => {
+export const Footer = ({ navigation, calculateTotal }) => {
+  const { cartItems, clearCart } = useCart();
   const refRBSheet = useRef();
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
 
-  const paymentMethods = [
+  const paymentMethods: {
+    method: string;
+    icon: keyof typeof Ionicons.glyphMap;
+  }[] = [
     { method: "Credit Card", icon: "card-outline" },
     { method: "PayPal", icon: "logo-paypal" },
     { method: "Cash on Delivery", icon: "cash-outline" },
@@ -17,6 +23,29 @@ export const Footer = ({ navigation, cartItems, calculateTotal }) => {
     setSelectedPaymentMethod(method);
   };
 
+  const handlePlaceOrder = async () => {
+    try {
+      const response = await fetch(`${apiBaseUrl}/orders`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartItems),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to post cart items");
+      }
+
+      const responseData = await response.json();
+      console.log("Checkout successful:", responseData);
+      clearCart();
+      navigation.navigate("OrderPlaced");
+    } catch (error) {
+      console.error("Error during checkout:", error);
+    }
+  };
+
   return (
     <>
       <View className="flex-row justify-between items-center px-5 py-4 border-t border-gray-200 bottom-0 right-0 left-0">
@@ -24,7 +53,9 @@ export const Footer = ({ navigation, cartItems, calculateTotal }) => {
           <Text className="text-lg font-bold text-gray-800">
             Total: ${calculateTotal().toFixed(2)}
           </Text>
-          <Pressable onPress={() => refRBSheet.current.open()}>
+          <Pressable
+            onPress={() => refRBSheet.current && refRBSheet.current.open()}
+          >
             <Text className="text-sm text-blue-600">
               {selectedPaymentMethod
                 ? `Payment: ${selectedPaymentMethod}`
@@ -35,12 +66,9 @@ export const Footer = ({ navigation, cartItems, calculateTotal }) => {
 
         <Pressable
           className="bg-blue-500 py-2 px-4 rounded-full"
-          onPress={() => navigation.navigate("OrderPlaced")}
+          onPress={handlePlaceOrder}
         >
-          <Text className="text-white text-base font-bold">
-            Place Order (
-            {cartItems.length > 0 ? Object.keys(cartItems[0]).length - 1 : 0})
-          </Text>
+          <Text className="text-white text-base font-bold">Place Order </Text>
         </Pressable>
       </View>
 
@@ -84,7 +112,7 @@ export const Footer = ({ navigation, cartItems, calculateTotal }) => {
           <Pressable
             className="bg-blue-600 p-3 mb-3 rounded-md items-center justify-center"
             onPress={() => {
-              refRBSheet.current.close();
+              refRBSheet.current && refRBSheet.current.close();
             }}
           >
             <Text className="text-white font-bold text-lg">Done</Text>

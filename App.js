@@ -7,25 +7,28 @@ import { LandingScreen } from "./screens/landingScreen/landingScreen";
 import { StyleSheet } from "react-native";
 import { CheckoutScreen } from "./screens/checkoutScreen/CheckoutScreen";
 import { OrderPlaced } from "./screens/OrderPlaced/orderPlaced";
+import { CartProvider } from "./cartContext";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-        >
-          <Stack.Screen name="Landing" component={LandingScreen} />
-          <Stack.Screen name="Menu" component={MenuScreen} />
-          <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
-          <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+    <CartProvider>
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}
+          >
+            <Stack.Screen name="Landing" component={LandingScreen} />
+            <Stack.Screen name="Menu" component={MenuScreen} />
+            <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
+            <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
+    </CartProvider>
   );
 }
 

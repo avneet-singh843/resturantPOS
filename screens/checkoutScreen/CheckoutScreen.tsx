@@ -1,97 +1,93 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { CartItemCard } from "./cartItemCard";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { RecommendationList } from "./recommendationList";
 import { BillDetails } from "./billDetails";
+import { useCart } from "../../cartContext";
 
-import { API_BASE_URL } from "@env";
-const apiBaseUrl = API_BASE_URL;
+const apiBaseUrl = "http://192.168.1.34:3000";
 
-export const CheckoutScreen = ({ navigation }) => {
-  const [cartItems, setCartItems] = useState([]);
-  const [error, setError] = useState(null);
+type RootStackParamList = {
+  Checkout: undefined;
+};
 
-  const fetchCuisines = async () => {
-    try {
-      const response = await fetch(`${apiBaseUrl}/cartItems`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      const lastCartItem = data[data.length - 1];
-      setCartItems(lastCartItem ? [lastCartItem] : []);
-    } catch (error) {
-      setError("Failed to fetch cuisines. Please try again later.");
+type CheckoutScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "Checkout"
+>;
+
+interface CheckoutScreenProps {
+  navigation: CheckoutScreenNavigationProp;
+}
+
+export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({
+  navigation,
+}) => {
+  const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
+  const [error, setError] = useState<string | null>(null);
+
+  // const fetchCartItems = async () => {
+  //   try {
+  //     const response = await fetch(`${apiBaseUrl}/cartItems`);
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+  //     const data = await response.json();
+  //     // Assuming the API returns an array of cart items
+  //     if (data.length > 0) {
+  //       data.forEach((item: any) => addToCart(item, item.selectedCuisine));
+  //     }
+  //   } catch (error) {
+  //     setError("Failed to fetch cart items. Please try again later.");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchCartItems();
+  // }, []);
+
+  const incrementQuantity = (itemName: string) => {
+    const item = cartItems[itemName];
+    if (item) {
+      addToCart(item, item.selectedCuisine);
     }
   };
 
-  useEffect(() => {
-    fetchCuisines();
-  }, []);
-
-  const incrementQuantity = (key) => {
-    setCartItems((prevItems) => {
-      const updatedItems = { ...prevItems[0] };
-      updatedItems[key].quantity += 1;
-      return [updatedItems];
-    });
-  };
-
-  const decrementQuantity = (key) => {
-    const updatedCartItems = [...cartItems];
-
-    if (updatedCartItems[0][key].quantity > 1) {
-      updatedCartItems[0][key].quantity -= 1;
-    } else {
-      delete updatedCartItems[0][key];
+  const decrementQuantity = (itemName: string) => {
+    const item = cartItems[itemName];
+    if (item) {
+      removeFromCart(item);
     }
-
-    setCartItems(updatedCartItems);
   };
 
   if (error) {
     return (
-      <SafeAreaView className="flex-1 justify-center items-center">
-        <Text className="text-red-500 text-base">{error}</Text>
+      <SafeAreaView
+        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      >
+        <Text style={{ color: "#EF4444", fontSize: 16 }}>{error}</Text>
       </SafeAreaView>
     );
   }
 
-  const calculateTotal = () => {
-    return cartItems.length > 0
-      ? Object.keys(cartItems[0]).reduce((total, key) => {
-          if (key !== "id") {
-            const item = cartItems[0][key];
-            return total + item.price * item.quantity;
-          }
-          return total;
-        }, 0)
-      : 0;
-  };
-
-  const clearCart = () => {
-    setCartItems([]);
+  const calculateTotal = (): number => {
+    return Object.values(cartItems).reduce((total, item) => {
+      return total + item.price * item.quantity;
+    }, 0);
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
       <Header navigation={navigation} clearCart={clearCart} />
       <ScrollView>
-        <CartItemCard
-          cartItems={cartItems}
-          incrementQuantity={incrementQuantity}
-          decrementQuantity={decrementQuantity}
-        />
-        <RecommendationList cartItems={cartItems} setCartItems={setCartItems} />
+        <CartItemCard />
+        <RecommendationList />
         <BillDetails calculateTotal={calculateTotal} />
       </ScrollView>
-      <Footer
-        navigation={navigation}
-        cartItems={cartItems}
-        calculateTotal={calculateTotal}
-      />
+      <Footer navigation={navigation} calculateTotal={calculateTotal} />
     </SafeAreaView>
   );
 };

@@ -15,18 +15,18 @@ import { MenuItem } from "./menuItem";
 import GoToCartBar from "./goToCartBar";
 import { FoodAdvertisement } from "./foodAdvertisement";
 import Header from "./header";
+import { useCart } from "../../cartContext";
 
-import { API_BASE_URL } from "@env";
-const apiBaseUrl = API_BASE_URL;
+const apiBaseUrl = "http://192.168.1.34:3000";
 
 export const MenuScreen = ({ navigation }) => {
+  const { cartItems, addToCart, removeFromCart } = useCart();
   const [selectedCuisine, setSelectedCuisine] = useState("Italian");
   const [cuisines, setCuisines] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [cartItems, setCartItems] = useState({});
+  // const [cartItems, setCartItems] = useState({});
   const fadeAnim = useRef(new Animated.Value(0)).current;
-
   const { height } = Dimensions.get("window");
 
   const fetchCuisines = async () => {
@@ -56,37 +56,37 @@ export const MenuScreen = ({ navigation }) => {
     fetchCuisines();
   }, [selectedCuisine]);
 
-  const incrementItem = (item) => {
-    setCartItems((prevItems) => {
-      const currentQty = prevItems[item.name]?.quantity || 0;
-      return {
-        ...prevItems,
-        [item.name]: {
-          ...item,
-          quantity: currentQty + 1,
-          selectedCuisine,
-        },
-      };
-    });
-  };
+  // const incrementItem = (item) => {
+  //   setCartItems((prevItems) => {
+  //     const currentQty = prevItems[item.name]?.quantity || 0;
+  //     return {
+  //       ...prevItems,
+  //       [item.name]: {
+  //         ...item,
+  //         quantity: currentQty + 1,
+  //         selectedCuisine,
+  //       },
+  //     };
+  //   });
+  // };
 
-  const decrementItem = (item) => {
-    setCartItems((prevItems) => {
-      const currentQty = prevItems[item.name]?.quantity || 0;
-      if (currentQty <= 1) {
-        const { [item.name]: _, ...rest } = prevItems;
-        return rest;
-      }
-      return {
-        ...prevItems,
-        [item.name]: {
-          ...item,
-          quantity: currentQty - 1,
-          selectedCuisine,
-        },
-      };
-    });
-  };
+  // const decrementItem = (item) => {
+  //   setCartItems((prevItems) => {
+  //     const currentQty = prevItems[item.name]?.quantity || 0;
+  //     if (currentQty <= 1) {
+  //       const { [item.name]: _, ...rest } = prevItems;
+  //       return rest;
+  //     }
+  //     return {
+  //       ...prevItems,
+  //       [item.name]: {
+  //         ...item,
+  //         quantity: currentQty - 1,
+  //         selectedCuisine,
+  //       },
+  //     };
+  //   });
+  // };
 
   return (
     <SafeAreaView className="flex-1">
@@ -127,19 +127,15 @@ export const MenuScreen = ({ navigation }) => {
                 key={item.name}
                 item={item}
                 quantity={cartItems[item.name]?.quantity || 0}
-                onIncrement={() => incrementItem(item)}
-                onDecrement={() => decrementItem(item)}
+                onIncrement={() => addToCart(item, selectedCuisine)}
+                onDecrement={() => removeFromCart(item)}
               />
             ))}
           </Animated.View>
         )}
       </ScrollView>
       <View className="absolute bottom-0 left-0 right-0">
-        <GoToCartBar
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          navigation={navigation}
-        />
+        <GoToCartBar navigation={navigation} />
       </View>
     </SafeAreaView>
   );

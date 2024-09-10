@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
-import { API_BASE_URL } from "@env";
-const apiBaseUrl = API_BASE_URL;
+const apiBaseUrl = "http://192.168.1.34:3000";
 
 export const Cuisines = ({ selectedCuisine, setSelectedCuisine }) => {
   const [cuisines, setCuisines] = useState([]);

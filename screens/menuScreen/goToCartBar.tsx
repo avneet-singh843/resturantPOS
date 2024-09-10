@@ -1,39 +1,19 @@
 import React from "react";
 import { View, Text, Pressable, Dimensions } from "react-native";
+import { useCart } from "../../cartContext";
 
-import { API_BASE_URL } from "@env";
-const apiBaseUrl = API_BASE_URL;
+const apiBaseUrl = "http://192.168.1.34:3000";
 
-const GoToCartBar = ({ cartItems, setCartItems, navigation }) => {
+const GoToCartBar = ({ navigation }) => {
+  const { cartItems, addToCart, removeFromCart } = useCart();
   let price = 0;
-
   Object.values(cartItems).forEach((item) => {
-    const itemPrice = parseFloat(item.price.replace("$", ""));
+    const itemPrice = parseFloat(item.price.toString().replace("$", ""));
     price += item.quantity * itemPrice;
   });
 
   const handleCheckout = async () => {
-    try {
-      const response = await fetch(`${apiBaseUrl}/cartItems`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartItems),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to post cart items");
-      }
-
-      const responseData = await response.json();
-      console.log("Checkout successful:", responseData);
-
-      navigation.navigate("CheckoutScreen");
-      setCartItems({});
-    } catch (error) {
-      console.error("Error during checkout:", error);
-    }
+    navigation.navigate("CheckoutScreen");
   };
 
   const { height } = Dimensions.get("window");
